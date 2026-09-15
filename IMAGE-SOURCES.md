@@ -1,1 +1,1 @@
-Supplied product photos are used only in the four-slide hero. The supplied Desktop/Sra Receita/logo.png replaces the logo throughout the site. Original product-card images are retained; the added gallery is removed.
+The supplied strawberry-sweets.webp is the fixed hero photo. The About photo retains its original aspect ratio. The supplied Desktop/Sra Receita/logo.png replaces the logo throughout the site. Original product-card images are retained; the added gallery is removed.

@@ -208,7 +208,7 @@ section{padding:90px 0}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .about-photo{position:relative}
 .about-photo img{
-  border-radius:var(--radius);aspect-ratio:4/3;object-fit:cover;width:100%;
+  display:block;border-radius:var(--radius);width:100%;height:auto;
   filter:saturate(.95) contrast(1.04);box-shadow:var(--shadow);
 }
 .about-photo .corner{
@@ -388,10 +388,7 @@ footer h3{color:var(--white);font-family:'Nunito Sans',sans-serif;font-weight:80
 <!-- ============ HERO ============ -->
 <section class="hero" id="home" aria-label="Welcome">
   <div class="hero-slides" aria-hidden="true">
-<img src="img/chocolate-drip-cake.webp" alt="" width="1121" height="1403" class="active" fetchpriority="high">
-<img src="img/strawberry-sweets.webp" alt="" width="1086" height="1448" loading="lazy">
-<img src="img/assorted-sweets.webp" alt="" width="1122" height="1402" loading="lazy">
-<img src="img/easter-eggs.webp" alt="" width="1254" height="1254" loading="lazy">
+<img src="img/strawberry-sweets.webp" alt="" width="1086" height="1448" class="active" fetchpriority="high">
   </div>
   <div class="hero-content">
     <span class="hero-eyebrow">
@@ -696,17 +693,6 @@ footer h3{color:var(--white);font-family:'Nunito Sans',sans-serif;font-weight:80
   links.addEventListener('click',function(e){
     if(e.target.tagName==='A'){links.classList.remove('open');toggle.setAttribute('aria-expanded','false');}
   });
-
-  /* hero slides */
-  var slides=document.querySelectorAll('.hero-slides img');
-  if(slides.length>1&&!reduced){
-    var cur=0;
-    setInterval(function(){
-      slides[cur].classList.remove('active');
-      cur=(cur+1)%slides.length;
-      slides[cur].classList.add('active');
-    },6000);
-  }
 
   /* hero rotating quotes (same set as review cards, badged as examples) */
   var quotes=[
